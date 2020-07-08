@@ -95,11 +95,11 @@ const IndexPage = () => (
             </Heading1>
             <SectionText>
               <Paragraph>
-                A 3A Solutions Budapesti <b>szoftverfejlesztő ügynökség</b> magas
-                szaktudásával várja, hogy az Ön szoftveres elképzeléseit digitális
-                valósággá váltsa!
+                A 3A Solutions Budapesti <b>szoftverfejlesztő ügynökség</b>{" "}
+                magas szaktudásával várja, hogy az Ön szoftveres elképzeléseit
+                digitális valósággá váltsa!
               </Paragraph>
-              <Button>Beszélgessünk projektjéről</Button>
+              <Button href='#contact'>Beszélgessünk projektjéről</Button>
             </SectionText>
           </div>
         </SectionPanel>
@@ -108,7 +108,7 @@ const IndexPage = () => (
     <Section light first>
       <SectionContent>
         <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text='3A Solutions'>
+          <Heading2 {...animate("slide-right", 200)} text="3A Solutions">
             <span>3A Solutions</span>
           </Heading2>
           <SectionText>
@@ -147,7 +147,7 @@ const IndexPage = () => (
     <Section light>
       <SectionContent>
         <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text='Mit csinálunk?'>
+          <Heading2 {...animate("slide-right", 200)} text="Mit csinálunk?">
             <span>Mit csinálunk?</span>
           </Heading2>
           <Heading3 center>
@@ -157,6 +157,16 @@ const IndexPage = () => (
             </span>
           </Heading3>
           <div className="cards">
+            <div className="card">
+              <h3>Egyedi fejlesztések</h3>
+              <Paragraph>
+                A speciális igények számunkra nem okoznak akadályt. Minden
+                ügyfelünk számára biztosítjuk a szoftverfejlesztés eszközeinek
+                széleskörű bevethetőségével (ide jöhetne a link a full
+                skillsethez) az egyedi informatikai megoldások fejlesztését és
+                implementálását és integrációját.
+              </Paragraph>
+            </div>
             <div className="card">
               <h3>Szakértői támogatás, tanácsadás</h3>
               <Paragraph>
@@ -173,16 +183,6 @@ const IndexPage = () => (
                 megoldásainkkal alapozzuk meg a projekt sikerét.
               </Paragraph>
             </div>
-            <div className="card">
-              <h3>Egyedi fejlesztések</h3>
-              <Paragraph>
-                A speciális igények számunkra nem okoznak akadályt. Minden
-                ügyfelünk számára biztosítjuk a szoftverfejlesztés eszközeinek
-                széleskörű bevethetőségével (ide jöhetne a link a full
-                skillsethez) az egyedi informatikai megoldások fejlesztését és
-                implementálását és integrációját.
-              </Paragraph>
-            </div>
           </div>
         </SectionPanel>
       </SectionContent>
@@ -191,7 +191,7 @@ const IndexPage = () => (
     <Section>
       <SectionContent>
         <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text='Hogyan csináljuk?'>
+          <Heading2 {...animate("slide-right", 200)} text="Hogyan csináljuk?">
             <span>Hogyan csináljuk?</span>
           </Heading2>
           <div className="cards">
@@ -215,7 +215,6 @@ const IndexPage = () => (
                 folytonos transzparens állapotot biztosítani.
               </Paragraph>
             </div>
-
           </div>
         </SectionPanel>
       </SectionContent>
@@ -224,7 +223,7 @@ const IndexPage = () => (
     <Section light>
       <SectionContent>
         <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text='Kik vagyunk?'>
+          <Heading2 {...animate("slide-right", 200)} text="Kik vagyunk?">
             <span>Kik vagyunk?</span>
           </Heading2>
           <SectionText>
@@ -271,7 +270,7 @@ const IndexPage = () => (
       </SectionContent>
     </Section>
 
-    <Section type="contact">
+    <Section type="contact" id="contact">
       <SectionContent justifyCenter>
         <SectionPanel>
           <Heading3 {...animate("slide-up", 200)}>

@@ -75,7 +75,7 @@ export const EmailLink = styled.a`
   color: #6e7ff3;
   font-size: 4rem;
   font-weight: bold;
-  margin-top: 6rem;
+  margin-top: 4rem;
   @media (max-width: 768px) {
     font-size: 2rem;
   }
@@ -216,14 +216,7 @@ export const Heading2 = styled.h2`
   z-index: 2;
   top: 0;
   left: 3rem;
-  
-  
-  @media (max-width: 768px) {
-    font-size: 2rem;
-    position: relative;
-    left: auto;
-    margin-bottom: 2rem;
-  }
+
   
   &:after {
     content: "${props => props.text}";
@@ -239,19 +232,25 @@ export const Heading2 = styled.h2`
     top: 5px;
     left: 5px;
     color: white;
-    /* background-image: url("${bg}");
-  background-clip: text;
-  background-size: 100%;
-  background-position: bottom right;
-  -webkit-background-clip: text;
-  color: transparent; */
-  text-shadow: 10px 10px 20px rgba(0,0,0,.05);
+    color: #f4f4f4;
+    text-shadow: 10px 10px 20px rgba(0,0,0,.05);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    position: relative;
+    left: auto;
+    margin-bottom: 2rem;
+    &:after {
+      font-size: 8rem;
+    }
   }
 `;
 
 export const Heading3 = styled.h2`
   font-size: 1.2rem;
   /* text-transform: uppercase; */
+
   text-align: center;
   margin: 2rem 0;
 `;
@@ -268,6 +267,7 @@ export const SectionText = styled.div`
 export const Paragraph = styled.p`
   font-size: 1rem;
   margin-bottom: 0;
+  color: #555;
 
   ${props =>
     props.centerText &&
@@ -332,8 +332,8 @@ export const Main = styled.section`
     left: 0; */
     padding: 0;
   }
-  ${Heading1} {
-    /* color: white; */
+  ${Paragraph} {
+    color: white;
   }
 
   ${SectionText} {
@@ -355,6 +355,7 @@ export const Section = styled.section`
   color: black;
   background-color: #e0dcdc;
   background-color: white;
+  background-color: #f2f2f2;
   overflow: hidden;
   
 
@@ -406,7 +407,7 @@ export const Section = styled.section`
       position: absolute;
       width: 100%;
       height: 100%;
-      background: white;
+      background: #f2f2f2;
       z-index: -1;
       top: 2rem;
       left: 2rem;
@@ -440,6 +441,7 @@ export const Section = styled.section`
       width: 14rem;
       border-radius: 20px;
       background: #ffffff;
+      background: #f4f4f4;
       box-shadow:  20px 20px 40px #cfcfcf;
       z-index: 3;
       overflow: hidden;
