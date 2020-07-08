@@ -1,18 +1,18 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React from "react";
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `transparent`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
+        maxWidth: 1200,
         padding: `1.45rem 1.0875rem`,
       }}
     >
@@ -24,19 +24,29 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575.803 390">
+          <path
+            className="light"
+            d="M105.607 390.148C47.375 390.148 0 343 0 285h30.908c0 40 33.51 74.24 74.699 74.24 41.146 0 74.729-33.368 74.729-74.356 0-39.009-31.336-71.607-69.336-74.183V179.86c38-2.581 69.415-35.179 69.415-74.215 0-40.961-33.565-74.606-74.754-74.606C64.472 31.04 30.908 65 30.908 105H0C0 48 47.375.132 105.607.132c58.233 0 105.609 47.35 105.609 105.354 0 37.612-20.02 71.081-50.207 89.722 30.14 18.637 50.127 52.059 50.127 89.637 0 58.029-47.34 105.303-105.529 105.303zM392.473 70.245L542.877 390h32.926L392.473.245 209.144 390h32.926z"
+          />
+          <path
+            className="dark"
+            d="M105.607 390.148C47.375 390.148 0 343 0 285h30.908c0 40 33.51 74.24 74.699 74.24 41.146 0 74.729-33.368 74.729-74.356 0-39.009-31.336-71.607-69.336-74.183V179.86c38-2.581 69.415-35.179 69.415-74.215 0-40.961-33.565-74.606-74.754-74.606C64.472 31.04 30.908 65 30.908 105H0C0 48 47.375.132 105.607.132c58.233 0 105.609 47.35 105.609 105.354 0 37.612-20.02 71.081-50.207 89.722 30.14 18.637 50.127 52.059 50.127 89.637 0 58.029-47.34 105.303-105.529 105.303zM392.473 70.245L542.877 390h32.926L392.473.245 209.144 390h32.926z"
+          />
+        </svg>
           {siteTitle}
         </Link>
       </h1>
     </div>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;
