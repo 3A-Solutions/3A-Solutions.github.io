@@ -73,7 +73,7 @@ export const EmailLink = styled.a`
   background-clip: text;
   -webkit-background-clip: text;
   color: #6e7ff3;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-top: 4rem;
   @media (max-width: 768px) {
@@ -200,6 +200,9 @@ export const Heading1 = styled.h1`
   div {
     white-space: nowrap;
   }
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
   @media (max-width: 413px) {
     font-size: 2rem;
   }
@@ -242,7 +245,7 @@ export const Heading2 = styled.h2`
     left: auto;
     margin-bottom: 2rem;
     &:after {
-      font-size: 8rem;
+      font-size: 7rem;
     }
   }
 `;
@@ -259,16 +262,20 @@ export const SectionText = styled.div`
   font-size: 1rem;
   max-width: 550px;
   position: relative;
-  line-height: 1.8;
+
   margin: 1rem auto 0;
   z-index: 1;
+`;
+
+export const PeopleContainer = styled.div`
+  padding: 2rem 0;
 `;
 
 export const Paragraph = styled.p`
   font-size: 1rem;
   margin-bottom: 0;
   color: #555;
-
+  line-height: 1.8;
   ${props =>
     props.centerText &&
     css`
@@ -276,10 +283,12 @@ export const Paragraph = styled.p`
     `}
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   font-size: 0.8rem;
   font-family: sans-serif;
-
+  
+  display: inline-block;
+  text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
   padding: 0.8rem 2rem;
@@ -378,10 +387,10 @@ export const Section = styled.section`
     css`
       text-align: center;
       background-color: #22243c;
-      background-image: linear-gradient(-225deg, #22243c 0%, #3D4E81 100%);
+      background-image: linear-gradient(-225deg, #22243c 0%, #3d4e81 100%);
       color: rgba(255, 255, 255, 0.8);
-      padding-top: 10rem !important;
-      padding-bottom: 10rem !important;
+      padding-top: 8rem !important;
+      padding-bottom: 12rem !important;
       ${Heading3} {
         font-weight: normal;
         margin-top: 0;
@@ -411,14 +420,14 @@ export const Section = styled.section`
       z-index: -1;
       top: 2rem;
       left: 2rem;
-      border-bottom-right-radius: 15px;
+      border-bottom-right-radius: 18px;
       /* opacity: 0.3; */
       
     }
 
     &:before {
-      top: 2.5rem;
-      left: 2.5rem;
+      top: 2.3rem;
+      left: 2.3rem;
       border-bottom-right-radius: 20px;
       background-image: linear-gradient(
         -225deg,
@@ -454,6 +463,7 @@ export const Section = styled.section`
       ${Paragraph} {
         font-size: .9rem;
         opacity: .9;
+        line-height: 1.6;
       }
       &:after{
         content: "";
@@ -477,7 +487,6 @@ export const Section = styled.section`
 
       &:hover {
         &:after {
-          
           background-position: right;
         }
       }
@@ -508,13 +517,14 @@ export const Section = styled.section`
     padding: 5rem 0;
     ${SectionText} {
       &:after {
-        top: 1.5rem;
-        left: 1.5rem;
+        top: 1.3rem;
+        left: 1.3rem;
       }      
       
       &:before {
-        top: 2rem;
-        left: 2rem;
+        top: 1.5rem;
+        left: 1.5rem;
+        
       }   
     }
   }

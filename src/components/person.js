@@ -11,17 +11,18 @@ const Block = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem 0 0;
+  &:first-child {
+    padding: 0 2rem 0 0;
+  }
 `;
 
-const Image = styled.div`
+const Image = styled.img`
   display: inline-block;
   height: 5rem;
   width: 5rem;
   border-radius: 5rem;
-  background: gray;
-  background: #e4e4e4;
-  box-shadow:  7px 7px 14px #ebebeb;
+  box-shadow: 9px 9px 19px #cecece, -9px -9px 19px #ffffff;
+  background-size: cover;
 `;
 
 const Name = styled.h3`

@@ -23,13 +23,13 @@ html {
 
 @media only screen and (max-width: 1200px) {
  html {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   html {
-     font-size: 12px;
+     font-size: 14px;
    }
  }
 
@@ -38,4 +38,14 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+footer {
+  color: white;
+  position: relative;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 10px;
+  background-color: #131313;
 }

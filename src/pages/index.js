@@ -10,6 +10,7 @@ import {
   Section,
   SectionContent,
   SectionPanel,
+  PeopleContainer,
   BackgroundInner,
   SectionText,
   Background,
@@ -19,28 +20,30 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline, SplitLetters } from "react-gsap";
 
 import Person from "../components/person";
-import BgImage from "../components/bgImage";
-import { Link } from "gatsby";
+
+import adam from "../images/adam.jpeg";
+import agoston from "../images/agoston.jpeg";
+import attila from "../images/attila.jpeg";
 
 const people = [
   {
     name: "Balázs Ágoston",
     title: "CEO of oparating management",
-    image: null,
+    image: agoston,
     description:
       "Eiusmod veniam ad adipisicing aliquip in cupidatat excepteur.",
   },
   {
     name: "Pápai Attila",
     title: "Lead Backend Engineer",
-    image: null,
+    image: attila,
     description:
       "Non magna consequat duis labore eiusmod adipisicing irure deserunt duis est.",
   },
   {
     name: "Varga Ádám",
     title: "Lead Frontend Engineer",
-    image: null,
+    image: adam,
     description:
       "Sit incididunt et proident adipisicing consequat ex non consectetur.",
   },
@@ -95,11 +98,11 @@ const IndexPage = () => (
             </Heading1>
             <SectionText>
               <Paragraph>
-                A 3A Solutions Budapesti <b>szoftverfejlesztő ügynökség</b>{" "}
-                magas szaktudásával várja, hogy az Ön szoftveres elképzeléseit
+                A 3A Solutions budapesti <b>szoftverfejlesztő ügynökség</b>{" "}
+                kiváló szaktudásával várja, hogy az Ön szoftveres elképzeléseit
                 digitális valósággá váltsa!
               </Paragraph>
-              <Button href='#contact'>Beszélgessünk projektjéről</Button>
+              <Button href="#contact">Beszélgessünk projektjéről</Button>
             </SectionText>
           </div>
         </SectionPanel>
@@ -113,32 +116,21 @@ const IndexPage = () => (
           </Heading2>
           <SectionText>
             <Paragraph {...animate("slide-up", 200)}>
-              A szoftverfejlesztés, mint iparág kivételes és kiemelkedő
-              dinamizmussal fejlődik. Ezen napról napra változó világban komoly
-              feladat tartani a lépést, mind know-how, mind a piaci pozíció
-              tekintetében. A 3A Solutions csapata hisz abban, hogy a cég
-              teljesítményét alapvetően az itt dolgozó kollégák szakmai
-              teljesítménye határozza meg, ezért kiemelt figyelmet fordítunk
-              munkatársaink szaktudásának folyamatos fejlesztésére.
+              A szoftveres megoldások fejlesztésében tapasztalt és kreatív
+              csapatunk az Ügyfelek egyedi igényeire szabott, teljeskörű
+              megoldást nyújt a tervezéstől a megvalósításig. Ideológiánk, hogy
+              minden esetben tudatosan megtervezett megoldással segítsük
+              Partnereinket céljaik sikeres elérésében. Az eredményorientált
+              fejlesztés kulcsa, hogy tapasztalataikat és kompetenciáikat az
+              adott problémára összpontosítva alakítsuk ki az ideális megoldást.
             </Paragraph>
             <Paragraph {...animate("slide-up", 200)}>
-              A vezetői körünk olyan elszánt tagokból áll, akik fiatalos
-              lendületükkel képesek az iparági tapasztalataikat és
-              kompetenciáikat felhasználva, azokat az adott problémára
-              összpontosítva Partnerüket az ideális megoldáshoz segíteni. A
-              piaci élvonal által definiált nívót rugalmas hozzállásunkkal,
-              kreatív ötleteinkkel és magas színvonalú szakmai kompetenciánkkal
-              szándékozzunk képviselni.
-            </Paragraph>
-            <Paragraph {...animate("slide-up", 200)}>
-              Ezek azonban csupán szakmai tények. A 3A Solutions ennél többet
-              nyújt ügyfeleinek, hiszen tudjuk, hogy a szaktudás mellett az
-              emberi kvalitások is nagyon fontosak. Ebből kifolyólag kiemelkedő
-              figyelmet szentelünk munkatársaink egyéni fejlődési lehetőségeinek
-              biztosítására, mind szakmai, mind szellemi tekintetben. Továbbá
-              fontosnak tartjuk csapatunk motivációjának gondozását,
-              folytonosságát, illetve fontos célunk a családias, baráti
-              hangulatú közeg megtartása és ápolása.
+              Rugalmas szervezeti felépítésünknek köszönhetően mindig az adott
+              projekt igényeihez igazodó csapatot és működési metodológiát
+              tudjuk biztosítani. A nagy szervezetekkel ellentétben – kevésbé
+              bürokratikus felépítésünkből adódóan – képesek vagyunk gyorsan
+              reagálni a változásokra, ami magában hordozza az azonnali
+              fejlesztés lehetőségét is.
             </Paragraph>
           </SectionText>
         </SectionPanel>
@@ -259,13 +251,15 @@ const IndexPage = () => (
         </SectionPanel>
 
         <SectionPanel spaceAround alignStart>
-          {people.map(person => (
-            <Person
-              key={person.name}
-              {...person}
-              {...animate("slide-left", 200)}
-            ></Person>
-          ))}
+          <PeopleContainer>
+            {people.map(person => (
+              <Person
+                key={person.name}
+                {...person}
+                {...animate("slide-left", 200)}
+              ></Person>
+            ))}
+          </PeopleContainer>
         </SectionPanel>
       </SectionContent>
     </Section>
@@ -277,9 +271,11 @@ const IndexPage = () => (
             <span>Kapcsolat</span>
           </Heading3>
           <Heading2 {...animate("slide-up", 200)}>
-            <span>Beszélgessünk projektjéről</span>
+            <span>Beszélgessünk projektjéről!</span>
           </Heading2>
-          <EmailLink>info@3asolutions.hu</EmailLink>
+          <EmailLink href="mailto:info@3asolutions.hu">
+            info@3asolutions.hu
+          </EmailLink>
         </SectionPanel>
       </SectionContent>
     </Section>

@@ -26,14 +26,12 @@ const Layout = ({ children }) => {
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div
-        
-      >
+      <div>
         <main>{children}</main>
-        {/* <footer>
-          Copyright © {new Date().getFullYear()} 3A Solutions Kft., All Rights
-          Reserved
-        </footer> */}
+        <footer>
+          Copyright © {new Date().getFullYear()} 3A Solutions Consulting Kft.,
+          All Rights Reserved
+        </footer>
       </div>
     </>
   );
