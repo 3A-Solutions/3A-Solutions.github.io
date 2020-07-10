@@ -56,8 +56,8 @@ export const Background = styled.div`
 
     path.light {
       transform: translate(-8px, -3px);
-      fill: white;
-      opacity: 0;
+      fill: #6361e8;
+      opacity: 1;
     }
   }
 `;
