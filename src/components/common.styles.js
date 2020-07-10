@@ -286,7 +286,7 @@ export const Paragraph = styled.p`
 export const Button = styled.a`
   font-size: 0.8rem;
   font-family: sans-serif;
-  
+
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -331,6 +331,8 @@ export const Main = styled.section`
   ${SectionText} {
     padding-top: 0;
     margin: 0 !important;
+    max-width: 500px;
+    width: auto;
   }
 
   ${SectionContent} {
@@ -408,7 +410,7 @@ export const Section = styled.section`
     `}
 
   ${SectionText} {
-    padding: 2rem 0;
+    padding: 2rem 0 1.5rem;
     &:after,
     &:before {
       content: "";
@@ -420,7 +422,7 @@ export const Section = styled.section`
       z-index: -1;
       top: 2rem;
       left: 2rem;
-      border-bottom-right-radius: 18px;
+      border-bottom-right-radius: 17px;
       /* opacity: 0.3; */
       
     }
@@ -519,7 +521,8 @@ export const Section = styled.section`
       &:after {
         top: 1.3rem;
         left: 1.3rem;
-      }      
+        border-bottom-right-radius: 17px;
+      }
       
       &:before {
         top: 1.5rem;
