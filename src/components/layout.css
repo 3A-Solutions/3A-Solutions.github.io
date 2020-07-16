@@ -11,7 +11,7 @@ html {
   background-color: #e0dcdc;
   background: #e4e4e4;
   color: black;
-
+  scroll-behavior: smooth;
   /* background: rgb(167, 160, 167); */
   /* background: linear-gradient(
     90deg,

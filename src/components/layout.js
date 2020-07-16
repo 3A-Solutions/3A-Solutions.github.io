@@ -8,6 +8,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import favicon from "../images/favicon.ico";
+import Helmet from "react-helmet";
 
 import Header from "./header";
 import "./layout.css";
@@ -25,11 +27,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <div>
         <main>{children}</main>
         <footer>
-          Copyright © {new Date().getFullYear()} 3A Solutions Consulting Kft.,
+          Copyright © {new Date().getFullYear()} 3A Solutions Informatika Kft.,
           All Rights Reserved
         </footer>
       </div>

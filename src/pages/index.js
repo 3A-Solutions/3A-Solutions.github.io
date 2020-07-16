@@ -15,37 +15,29 @@ import {
   SectionText,
   Background,
   EmailLink,
+  NavBar,
+  NavLink,
 } from "../components/common.styles";
-import { Controller, Scene } from "react-scrollmagic";
-import { Tween, Timeline, SplitLetters } from "react-gsap";
 
 import Person from "../components/person";
 
 import adam from "../images/adam.jpeg";
 import agoston from "../images/agoston.jpeg";
 import attila from "../images/attila.jpeg";
+import { Controller, Scene } from "react-scrollmagic";
 
 const people = [
   {
     name: "Balázs Ágoston",
-    title: "CEO of oparating management",
     image: agoston,
-    description:
-      "Eiusmod veniam ad adipisicing aliquip in cupidatat excepteur.",
   },
   {
     name: "Pápai Attila",
-    title: "Lead Backend Engineer",
     image: attila,
-    description:
-      "Non magna consequat duis labore eiusmod adipisicing irure deserunt duis est.",
   },
   {
     name: "Varga Ádám",
-    title: "Lead Frontend Engineer",
     image: adam,
-    description:
-      "Sit incididunt et proident adipisicing consequat ex non consectetur.",
   },
 ];
 
@@ -65,220 +57,229 @@ const animate = (
 
 const IndexPage = () => (
   <Layout>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      style={{
-        position: "absolute",
-      }}
-    >
-      <clipPath id="logo-clip-path" clipPathUnits="objectBoundingBox">
-        <path d="M0.183,1 C0.082,1,0,0.879,0,0.731 h0.054 c0,0.103,0.058,0.19,0.13,0.19 c0.071,0,0.13,-0.086,0.13,-0.191 c0,-0.1,-0.054,-0.184,-0.12,-0.19 V0.461 c0.066,-0.007,0.121,-0.09,0.121,-0.19 c0,-0.105,-0.058,-0.191,-0.13,-0.191 C0.112,0.08,0.054,0.167,0.054,0.269 H0 C0,0.123,0.082,0,0.183,0 c0.101,0,0.183,0.121,0.183,0.27 c0,0.096,-0.035,0.182,-0.087,0.23 c0.052,0.048,0.087,0.133,0.087,0.23 c0,0.149,-0.082,0.27,-0.183,0.27 M0.682,0.18 L0.943,1 h0.057 L0.682,0.001,0.363,1 h0.057" />
-      </clipPath>
-    </svg>
-    <Main>
-      <Background>
-        <BackgroundInner></BackgroundInner>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575.803 390">
-          <path
-            className="light"
-            d="M105.607 390.148C47.375 390.148 0 343 0 285h30.908c0 40 33.51 74.24 74.699 74.24 41.146 0 74.729-33.368 74.729-74.356 0-39.009-31.336-71.607-69.336-74.183V179.86c38-2.581 69.415-35.179 69.415-74.215 0-40.961-33.565-74.606-74.754-74.606C64.472 31.04 30.908 65 30.908 105H0C0 48 47.375.132 105.607.132c58.233 0 105.609 47.35 105.609 105.354 0 37.612-20.02 71.081-50.207 89.722 30.14 18.637 50.127 52.059 50.127 89.637 0 58.029-47.34 105.303-105.529 105.303zM392.473 70.245L542.877 390h32.926L392.473.245 209.144 390h32.926z"
-          />
-          <path
-            className="dark"
-            d="M105.607 390.148C47.375 390.148 0 343 0 285h30.908c0 40 33.51 74.24 74.699 74.24 41.146 0 74.729-33.368 74.729-74.356 0-39.009-31.336-71.607-69.336-74.183V179.86c38-2.581 69.415-35.179 69.415-74.215 0-40.961-33.565-74.606-74.754-74.606C64.472 31.04 30.908 65 30.908 105H0C0 48 47.375.132 105.607.132c58.233 0 105.609 47.35 105.609 105.354 0 37.612-20.02 71.081-50.207 89.722 30.14 18.637 50.127 52.059 50.127 89.637 0 58.029-47.34 105.303-105.529 105.303zM392.473 70.245L542.877 390h32.926L392.473.245 209.144 390h32.926z"
-          />
-        </svg>
-      </Background>
-      <SectionContent>
-        <SectionPanel column center>
-          <div>
-            <Heading1>
-              <div>We don't see problems.</div>
-              <div>We see solutions.</div>
-            </Heading1>
+    <Controller>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 578.632 396.434"
+        style={{
+          position: "absolute",
+        }}
+      >
+        <clipPath id="logo-clip-path" clipPathUnits="objectBoundingBox">
+          <path d="M0.291,0.457 c0.046,-0.045,0.077,-0.121,0.077,-0.208 c0,-0.137,-0.076,-0.249,-0.17,-0.249 S0.028,0.113,0.028,0.249 h0.052 c0,-0.093,0.053,-0.172,0.118,-0.172 s0.118,0.078,0.118,0.173 s-0.053,0.173,-0.118,0.173 v0.076 c0.081,0,0.146,0.096,0.146,0.213 s-0.065,0.213,-0.146,0.213 S0.052,0.83,0.052,0.711 H0 c0,0.162,0.089,0.29,0.198,0.29 s0.198,-0.129,0.198,-0.289 c0,-0.11,-0.043,-0.206,-0.105,-0.255 M0.696,0.003 L0.393,0.999 h0.056 L0.696,0.187 l0.248,0.812 h0.056" />
+        </clipPath>
+      </svg>
+      <Scene classToggle="bg" triggerElement="#company" triggerHook={0.07}>
+        <NavBar>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.632 396.434">
+            <path d="M168.422 181.166c26.681-17.654 44.429-47.928 44.429-82.214 0-54.279-44.127-98.516-98.406-98.516S16.007 44.717 16.007 98.717h30c0-37 30.685-68.281 68.422-68.281s68.422 30.857 68.422 68.594-30.469 68.438-68.469 68.438v30.118c47 0 84.592 37.819 84.592 84.424s-37.847 84.425-84.452 84.425S30 328.717 30 281.717H0c0 64 51.374 114.717 114.521 114.717s114.452-51.278 114.452-114.425c.001-43.596-24.593-81.53-60.551-100.843zM402.889 1L227.146 395.717h32.502L402.889 74l143.24 321.717h32.503z" />
+          </svg>
+          <NavLink href="#company">A cégről</NavLink>
+          <NavLink href="#what">Mit csinálunk</NavLink>
+          <NavLink href="#how">Hogyan csináljuk</NavLink>
+          <NavLink href="#who">Kik vagyunk</NavLink>
+          <NavLink href="#contact">Kapcsolat</NavLink>
+        </NavBar>
+      </Scene>
+
+      <Main>
+        <Background>
+          <BackgroundInner></BackgroundInner>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.632 396.434">
+            <path
+              className="light"
+              d="M168.422 181.166c26.681-17.654 44.429-47.928 44.429-82.214 0-54.279-44.127-98.516-98.406-98.516S16.007 44.717 16.007 98.717h30c0-37 30.685-68.281 68.422-68.281s68.422 30.857 68.422 68.594-30.469 68.438-68.469 68.438v30.118c47 0 84.592 37.819 84.592 84.424s-37.847 84.425-84.452 84.425S30 328.717 30 281.717H0c0 64 51.374 114.717 114.521 114.717s114.452-51.278 114.452-114.425c.001-43.596-24.593-81.53-60.551-100.843zM402.889 1L227.146 395.717h32.502L402.889 74l143.24 321.717h32.503z"
+            />
+            <path
+              className="dark"
+              d="M168.422 181.166c26.681-17.654 44.429-47.928 44.429-82.214 0-54.279-44.127-98.516-98.406-98.516S16.007 44.717 16.007 98.717h30c0-37 30.685-68.281 68.422-68.281s68.422 30.857 68.422 68.594-30.469 68.438-68.469 68.438v30.118c47 0 84.592 37.819 84.592 84.424s-37.847 84.425-84.452 84.425S30 328.717 30 281.717H0c0 64 51.374 114.717 114.521 114.717s114.452-51.278 114.452-114.425c.001-43.596-24.593-81.53-60.551-100.843zM402.889 1L227.146 395.717h32.502L402.889 74l143.24 321.717h32.503z"
+            />
+          </svg>
+        </Background>
+        <SectionContent>
+          <SectionPanel column center>
+            <div>
+              <Heading1>
+                <div>We don't see problems.</div>
+                <div>We see solutions.</div>
+              </Heading1>
+              <SectionText>
+                <Paragraph>
+                  A 3A Solutions budapesti <b>szoftverfejlesztő ügynökség</b>{" "}
+                  kiváló szaktudásával várja, hogy az Ön szoftveres
+                  elképzeléseit digitális valósággá váltsa!
+                </Paragraph>
+                <Button href="#contact">Beszélgessünk projektjéről</Button>
+              </SectionText>
+            </div>
+          </SectionPanel>
+        </SectionContent>
+      </Main>
+      <Section light first id="company">
+        <SectionContent>
+          <SectionPanel>
+            <Heading2 {...animate("slide-right", 200)} text="3A Solutions">
+              <span>3A Solutions</span>
+            </Heading2>
             <SectionText>
-              <Paragraph>
-                A 3A Solutions budapesti <b>szoftverfejlesztő ügynökség</b>{" "}
-                kiváló szaktudásával várja, hogy az Ön szoftveres elképzeléseit
-                digitális valósággá váltsa!
+              <Paragraph {...animate("slide-up", 200)}>
+                A szoftveres megoldások fejlesztésében tapasztalt és kreatív
+                csapatunk az Ügyfelek egyedi igényeire szabott, teljeskörű
+                megoldást nyújt a tervezéstől a megvalósításig. Ideológiánk,
+                hogy minden esetben tudatosan megtervezett megoldással segítsük
+                Partnereinket céljaik sikeres elérésében. Az eredményorientált
+                fejlesztés kulcsa, hogy tapasztalataikat és kompetenciáikat az
+                adott problémára összpontosítva alakítsuk ki az ideális
+                megoldást.
               </Paragraph>
-              <Button href="#contact">Beszélgessünk projektjéről</Button>
+              <Paragraph {...animate("slide-up", 200)}>
+                Rugalmas szervezeti felépítésünknek köszönhetően mindig az adott
+                projekt igényeihez igazodó csapatot és működési metodológiát
+                tudjuk biztosítani. A nagy szervezetekkel ellentétben képesek
+                vagyunk gyorsan reagálni a változásokra, ami magában hordozza az
+                azonnali fejlesztés lehetőségét is.
+              </Paragraph>
             </SectionText>
-          </div>
-        </SectionPanel>
-      </SectionContent>
-    </Main>
-    <Section light first>
-      <SectionContent>
-        <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text="3A Solutions">
-            <span>3A Solutions</span>
-          </Heading2>
-          <SectionText>
-            <Paragraph {...animate("slide-up", 200)}>
-              A szoftveres megoldások fejlesztésében tapasztalt és kreatív
-              csapatunk az Ügyfelek egyedi igényeire szabott, teljeskörű
-              megoldást nyújt a tervezéstől a megvalósításig. Ideológiánk, hogy
-              minden esetben tudatosan megtervezett megoldással segítsük
-              Partnereinket céljaik sikeres elérésében. Az eredményorientált
-              fejlesztés kulcsa, hogy tapasztalataikat és kompetenciáikat az
-              adott problémára összpontosítva alakítsuk ki az ideális megoldást.
-            </Paragraph>
-            <Paragraph {...animate("slide-up", 200)}>
-              Rugalmas szervezeti felépítésünknek köszönhetően mindig az adott
-              projekt igényeihez igazodó csapatot és működési metodológiát
-              tudjuk biztosítani. A nagy szervezetekkel ellentétben – kevésbé
-              bürokratikus felépítésünkből adódóan – képesek vagyunk gyorsan
-              reagálni a változásokra, ami magában hordozza az azonnali
-              fejlesztés lehetőségét is.
-            </Paragraph>
-          </SectionText>
-        </SectionPanel>
-      </SectionContent>
-    </Section>
-    <Section light>
-      <SectionContent>
-        <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text="Mit csinálunk?">
-            <span>Mit csinálunk?</span>
-          </Heading2>
-          <Heading3 center>
-            <span>
-              Klasszikus és agilis módszertanokon alapúló egyedi B2B és B2C
-              szoftverfejlesztés
-            </span>
-          </Heading3>
-          <div className="cards">
-            <div className="card">
-              <h3>Egyedi fejlesztések</h3>
-              <Paragraph>
-                A speciális igények számunkra nem okoznak akadályt. Minden
-                ügyfelünk számára biztosítjuk a szoftverfejlesztés eszközeinek
-                széleskörű bevethetőségével (ide jöhetne a link a full
-                skillsethez) az egyedi informatikai megoldások fejlesztését és
-                implementálását és integrációját.
-              </Paragraph>
+          </SectionPanel>
+        </SectionContent>
+      </Section>
+      <Section light id="what">
+        <SectionContent>
+          <SectionPanel>
+            <Heading2 {...animate("slide-right", 200)} text="Mit csinálunk?">
+              <span>Mit csinálunk?</span>
+            </Heading2>
+            <Heading3 center>
+              <span>
+                Klasszikus és agilis módszertanokon alapúló egyedi B2B és B2C
+                szoftverfejlesztés
+              </span>
+            </Heading3>
+            <div className="cards">
+              <div className="card">
+                <h3>Egyedi fejlesztések</h3>
+                <Paragraph>
+                  A speciális igények számunkra nem okoznak akadályt. Minden
+                  ügyfelünk számára biztosítjuk a szoftverfejlesztés eszközeinek
+                  széleskörű bevethetőségével az egyedi informatikai megoldások
+                  fejlesztését és implementálását és integrációját.
+                </Paragraph>
+              </div>
+              <div className="card">
+                <h3>Szakértői támogatás, tanácsadás</h3>
+                <Paragraph>
+                  Kiemelkedő szoftvertervezési- és fejlesztési kompetenciákkal
+                  rendelkező tanácsadóink biztosítják, hogy a leghatékonyabb
+                  koncepcióval szolgáljunk Partnereink üzleti vagy informatikai
+                  problémái megoldására.
+                </Paragraph>
+              </div>
+              <div className="card">
+                <h3>Agilis tervezés </h3>
+                <Paragraph>
+                  Sokéves szakmai tapasztalatunk és rugalmas, kreatív
+                  informatikai megoldásainkkal alapozzuk meg a projekt sikerét.
+                </Paragraph>
+              </div>
             </div>
-            <div className="card">
-              <h3>Szakértői támogatás, tanácsadás</h3>
-              <Paragraph>
-                Kiemelkedő szoftvertervezési- és fejlesztési kompetenciákkal
-                rendelkező tanácsadóink biztosítják, hogy a leghatékonyabb
-                koncepcióval szolgáljunk Partnereink üzleti vagy informatikai
-                problémái megoldására.
-              </Paragraph>
-            </div>
-            <div className="card">
-              <h3>Agilis tervezés </h3>
-              <Paragraph>
-                Sokéves szakmai tapasztalatunk és rugalmas, kreatív informatikai
-                megoldásainkkal alapozzuk meg a projekt sikerét.
-              </Paragraph>
-            </div>
-          </div>
-        </SectionPanel>
-      </SectionContent>
-    </Section>
+          </SectionPanel>
+        </SectionContent>
+      </Section>
 
-    <Section>
-      <SectionContent>
-        <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text="Hogyan csináljuk?">
-            <span>Hogyan csináljuk?</span>
-          </Heading2>
-          <div className="cards">
-            <div className="card">
-              <h3>Agilis módszertanok</h3>
-              <Paragraph>
-                Elvünk, hogy ahányan vagyunk, annyiféle sikeres út létezik egy
-                partneri együttműködésben. Ezért csapatunk a klasszikus agilis
-                módszertanokra alapozva, különös odafigyelést szentelve (vagy
-                csak simán” különös odafigyeléssel”) alakítja ki az Ügyfelünk
-                számára ideális, agilis módszertant.
-              </Paragraph>
+      <Section id="how">
+        <SectionContent>
+          <SectionPanel>
+            <Heading2 {...animate("slide-right", 200)} text="Hogyan csináljuk?">
+              <span>Hogyan csináljuk?</span>
+            </Heading2>
+            <div className="cards">
+              <div className="card">
+                <h3>Agilis módszertanok</h3>
+                <Paragraph>
+                  Elvünk, hogy ahányan vagyunk, annyiféle sikeres út létezik egy
+                  partneri együttműködésben. Ezért csapatunk a klasszikus agilis
+                  módszertanokra alapozva, különös odafigyeléssel alakítja ki az
+                  Ügyfelünk számára ideális, agilis módszertant.
+                </Paragraph>
+              </div>
+              <div className="card">
+                <h3>Tradicionális módszertanok</h3>
+                <Paragraph>
+                  Menedzsmentünk sokéves tapasztalatai alapján hatékony
+                  eszközként tekint a klasszikus, vízesés modellekre épülő
+                  módszertanokra is. Az együttműködés során kiemelkedő
+                  proaktivitással és precízen előkészített információkkal
+                  igyekszünk Ügyeleink számára egy folytonos transzparens
+                  állapotot biztosítani.
+                </Paragraph>
+              </div>
             </div>
-            <div className="card">
-              <h3>Tradicionális módszertanok</h3>
-              <Paragraph>
-                Menedzsmentünk sokéves tapasztalatai alapján hatékony eszközként
-                tekint a klasszikus, vízesés modellekre épülő módszertanokra is.
-                Az együttműködés során kiemelkedő proaktivitással és precízen
-                előkészített információkkal igyekszünk Ügyeleink számára egy
-                folytonos transzparens állapotot biztosítani.
+          </SectionPanel>
+        </SectionContent>
+      </Section>
+
+      <Section light id="who">
+        <SectionContent>
+          <SectionPanel>
+            <Heading2 {...animate("slide-right", 200)} text="Kik vagyunk?">
+              <span>Kik vagyunk?</span>
+            </Heading2>
+            <SectionText>
+              <Paragraph {...animate("slide-up", 200)}>
+                A szoftverfejlesztés, mint iparág kivételes és kiemelkedő
+                dinamizmussal fejlődik. Ezen napról napra változó világban
+                komoly feladat tartani a lépést, mind know-how, mind a piaci
+                pozíció tekintetében. A 3A Solutions csapata hisz abban, hogy a
+                cég teljesítményét alapvetően az itt dolgozó kollégák szakmai
+                teljesítménye határozza meg, ezért kiemelt figyelmet fordítunk
+                munkatársaink szaktudásának folyamatos fejlesztésére.
               </Paragraph>
-            </div>
-          </div>
-        </SectionPanel>
-      </SectionContent>
-    </Section>
+              <Paragraph {...animate("slide-up", 200)}>
+                A vezetői körünk olyan elszánt tagokból áll, akik fiatalos
+                lendületükkel képesek az iparági tapasztalataikat és
+                kompetenciáikat felhasználva, azokat az adott problémára
+                összpontosítva Partnerüket az ideális megoldáshoz segíteni. A
+                piaci élvonal által definiált nívót rugalmas hozzállásunkkal,
+                kreatív ötleteinkkel és magas színvonalú szakmai
+                kompetenciánkkal szándékozzunk képviselni.
+              </Paragraph>
+              <Paragraph {...animate("slide-up", 200)}>
+                Ezek azonban csupán szakmai tények. A 3A Solutions ennél többet
+                nyújt ügyfeleinek, hiszen tudjuk, hogy a szaktudás mellett az
+                emberi kvalitások is nagyon fontosak. Ebből kifolyólag
+                kiemelkedő figyelmet szentelünk munkatársaink egyéni fejlődési
+                lehetőségeinek biztosítására, mind szakmai, mind szellemi
+                tekintetben. Továbbá fontosnak tartjuk csapatunk motivációjának
+                gondozását, folytonosságát, illetve fontos célunk a családias,
+                baráti hangulatú közeg megtartása és ápolása.
+              </Paragraph>
+            </SectionText>
+          </SectionPanel>
 
-    <Section light>
-      <SectionContent>
-        <SectionPanel>
-          <Heading2 {...animate("slide-right", 200)} text="Kik vagyunk?">
-            <span>Kik vagyunk?</span>
-          </Heading2>
-          <SectionText>
-            <Paragraph {...animate("slide-up", 200)}>
-              A szoftverfejlesztés, mint iparág kivételes és kiemelkedő
-              dinamizmussal fejlődik. Ezen napról napra változó világban komoly
-              feladat tartani a lépést, mind know-how, mind a piaci pozíció
-              tekintetében. A 3A Solutions csapata hisz abban, hogy a cég
-              teljesítményét alapvetően az itt dolgozó kollégák szakmai
-              teljesítménye határozza meg, ezért kiemelt figyelmet fordítunk
-              munkatársaink szaktudásának folyamatos fejlesztésére.
-            </Paragraph>
-            <Paragraph {...animate("slide-up", 200)}>
-              A vezetői körünk olyan elszánt tagokból áll, akik fiatalos
-              lendületükkel képesek az iparági tapasztalataikat és
-              kompetenciáikat felhasználva, azokat az adott problémára
-              összpontosítva Partnerüket az ideális megoldáshoz segíteni. A
-              piaci élvonal által definiált nívót rugalmas hozzállásunkkal,
-              kreatív ötleteinkkel és magas színvonalú szakmai kompetenciánkkal
-              szándékozzunk képviselni.
-            </Paragraph>
-            <Paragraph {...animate("slide-up", 200)}>
-              Ezek azonban csupán szakmai tények. A 3A Solutions ennél többet
-              nyújt ügyfeleinek, hiszen tudjuk, hogy a szaktudás mellett az
-              emberi kvalitások is nagyon fontosak. Ebből kifolyólag kiemelkedő
-              figyelmet szentelünk munkatársaink egyéni fejlődési lehetőségeinek
-              biztosítására, mind szakmai, mind szellemi tekintetben. Továbbá
-              fontosnak tartjuk csapatunk motivációjának gondozását,
-              folytonosságát, illetve fontos célunk a családias, baráti
-              hangulatú közeg megtartása és ápolása.
-            </Paragraph>
-          </SectionText>
-        </SectionPanel>
+          <SectionPanel spaceAround alignStart>
+            <PeopleContainer>
+              {people.map(person => (
+                <Person
+                  key={person.name}
+                  {...person}
+                  {...animate("slide-left", 200)}
+                ></Person>
+              ))}
+            </PeopleContainer>
+          </SectionPanel>
+        </SectionContent>
+      </Section>
 
-        <SectionPanel spaceAround alignStart>
-          <PeopleContainer>
-            {people.map(person => (
-              <Person
-                key={person.name}
-                {...person}
-                {...animate("slide-left", 200)}
-              ></Person>
-            ))}
-          </PeopleContainer>
-        </SectionPanel>
-      </SectionContent>
-    </Section>
-
-    <Section type="contact" id="contact">
-      <SectionContent justifyCenter>
-        <SectionPanel>
-          <Heading3 {...animate("slide-up", 200)}>
-            <span>Kapcsolat</span>
-          </Heading3>
-          <Heading2 {...animate("slide-up", 200)}>
-            <span>Beszélgessünk projektjéről!</span>
-          </Heading2>
-          <EmailLink href="mailto:info@3asolutions.hu">
-            info@3asolutions.hu
-          </EmailLink>
-        </SectionPanel>
-      </SectionContent>
-    </Section>
+      <Section type="contact" id="contact">
+        <Heading3 {...animate("slide-up", 200)}>Kapcsolat</Heading3>
+        <Heading2 {...animate("slide-up", 200)}>
+          <span>Beszélgessünk projektjéről!</span>
+        </Heading2>
+        <EmailLink href="mailto:info@3asolutions.hu">
+          info@3asolutions.hu
+        </EmailLink>
+      </Section>
+    </Controller>
   </Layout>
 );
 
