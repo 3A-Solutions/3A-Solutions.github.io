@@ -151,7 +151,7 @@ const IndexPage = () => (
             </Heading2>
             <Heading3 center>
               <span>
-                Klasszikus és agilis módszertanokon alapúló egyedi B2B és B2C
+                Klasszikus és agilis módszertanokon alapuló egyedi B2B és B2C
                 szoftverfejlesztés
               </span>
             </Heading3>
