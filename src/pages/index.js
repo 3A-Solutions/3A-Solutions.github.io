@@ -24,6 +24,7 @@ import Person from "../components/person";
 import adam from "../images/adam.jpeg";
 import agoston from "../images/agoston.jpeg";
 import attila from "../images/attila.jpeg";
+import balazs from "../images/balazs.jpeg";
 import { Controller, Scene } from "react-scrollmagic";
 
 const people = [
@@ -34,6 +35,10 @@ const people = [
   {
     name: "Pápai Attila",
     image: attila,
+  },
+  {
+    name: "Timaffy Balázs",
+    image: balazs,
   },
   {
     name: "Varga Ádám",
