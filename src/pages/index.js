@@ -63,7 +63,7 @@ const animate = (
 const IndexPage = () => (
   <Layout>
     <Controller>
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 578.632 396.434"
         style={{
@@ -73,7 +73,7 @@ const IndexPage = () => (
         <clipPath id="logo-clip-path" clipPathUnits="objectBoundingBox">
           <path d="M0.291,0.457 c0.046,-0.045,0.077,-0.121,0.077,-0.208 c0,-0.137,-0.076,-0.249,-0.17,-0.249 S0.028,0.113,0.028,0.249 h0.052 c0,-0.093,0.053,-0.172,0.118,-0.172 s0.118,0.078,0.118,0.173 s-0.053,0.173,-0.118,0.173 v0.076 c0.081,0,0.146,0.096,0.146,0.213 s-0.065,0.213,-0.146,0.213 S0.052,0.83,0.052,0.711 H0 c0,0.162,0.089,0.29,0.198,0.29 s0.198,-0.129,0.198,-0.289 c0,-0.11,-0.043,-0.206,-0.105,-0.255 M0.696,0.003 L0.393,0.999 h0.056 L0.696,0.187 l0.248,0.812 h0.056" />
         </clipPath>
-      </svg>
+      </svg> */}
       <Scene classToggle="bg" triggerElement="#company" triggerHook={0.07}>
         <NavBar>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.632 396.434">
@@ -89,7 +89,7 @@ const IndexPage = () => (
 
       <Main>
         <Background>
-          <BackgroundInner></BackgroundInner>
+          {/* <BackgroundInner></BackgroundInner> */}
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.632 396.434">
             <path
               className="light"

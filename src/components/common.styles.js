@@ -57,19 +57,18 @@ export const Background = styled.div`
     position: relative;
     overflow: visible !important;
 
-    filter: blur(10px);
     z-index: -20;
 
     path.dark {
       transform: translate(4px, 2px);
       fill: black;
       opacity: 0.2;
+      display: none;
     }
 
     path.light {
-      transform: translate(-8px, -3px);
-      fill: #6361e8;
-      opacity: 1;
+      fill: white;
+      opacity: .9;
     }
   }
 `;
