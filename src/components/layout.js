@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import favicon from "../images/favicon.ico";
 import Helmet from "react-helmet";
 
-import Header from "./header";
 import "./layout.css";
 
 const Layout = ({ children }) => {
@@ -20,15 +19,28 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
+          image
         }
       }
     }
   `);
 
+  console.log(data);
+
+  const {title, description, image} = data.site.siteMetadata;
+
+  console.log(title, description, image);
+
   return (
     <>
       <Helmet>
         <link rel="icon" href={favicon} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />  
+        <meta property="og:image" content={image} />
       </Helmet>
       <div>
         <main>{children}</main>

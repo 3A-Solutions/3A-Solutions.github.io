@@ -21,10 +21,10 @@ import {
 
 import Person from "../components/person";
 
-import adam from "../images/adam.jpeg";
-import agoston from "../images/agoston.jpeg";
-import attila from "../images/attila.jpeg";
-import balazs from "../images/balazs.jpeg";
+import adam from "../images/adam.jpg";
+import agoston from "../images/agoston.jpg";
+import attila from "../images/attila.jpg";
+import balazs from "../images/balazs.jpg";
 import { Controller, Scene } from "react-scrollmagic";
 
 const people = [
