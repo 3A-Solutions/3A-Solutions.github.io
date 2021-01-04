@@ -37,10 +37,6 @@ const people = [
     image: attila,
   },
   {
-    name: "Timaffy Balázs",
-    image: balazs,
-  },
-  {
     name: "Varga Ádám",
     image: adam,
   },
