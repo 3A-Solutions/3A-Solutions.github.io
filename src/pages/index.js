@@ -29,10 +29,6 @@ import { Controller, Scene } from "react-scrollmagic";
 
 const people = [
   {
-    name: "Balázs Ágoston",
-    image: agoston,
-  },
-  {
     name: "Pápai Attila",
     image: attila,
   },
